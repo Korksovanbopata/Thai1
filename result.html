@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>สรุปคะแนน</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>เกมจบแล้ว!</h2>
+        <p>คุณตอบถูกทั้งหมดกี่คะแนนจ๊ะ</p>
+        <button onclick="restartGame()">เล่นใหม่</button>
+    </div>
+
+    <script>
+        window.onload = function() {
+            const score = localStorage.getItem('score') || 0; 
+            document.getElementById('score').textContent = score; 
+        }
+
+        function restartGame() {
+            localStorage.removeItem('score'); 
+            window.location.href = "index.html"; 
+        }
+    </script>
+</body>
+</html>

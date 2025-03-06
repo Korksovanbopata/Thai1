@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>คำถาม 1</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h2>คำถามที่ 1</h2>
+        <p><strong>“จับปลาสองมือ”</strong> หมายถึงอะไร?</p>
+        <img src="1.jpg" alt="จับปลาสองมือ" class="saying-image">
+        <button class="option" onclick="checkAnswer(this, 'ผิด')">ทำอะไรด้วยความตั้งใจ</button>
+        <button class="option" onclick="checkAnswer(this, 'ถูก')">ทำสองอย่างพร้อมกันแต่ไม่ได้ดีสักอย่าง</button>
+        <button class="option" onclick="checkAnswer(this, 'ผิด')">ไม่พยายามทำอะไรเลย</button>
+        <br>
+        <!-- Update the 'next-btn' to navigate to the second question -->
+        <button class="next-btn" onclick="window.location.href='question2.html'">ถัดไป</button>
+    </div>
+    <script>
+        function startGame() {
+            window.location.href = "question2.html";
+        }
+    </script>
+</body>
+</html>
